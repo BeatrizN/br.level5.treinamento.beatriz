@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<title>Treinamento Level 5 jr</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet"  href="normalize.css"/>	
+	<link rel="stylesheet" media="screen and (min-width:870px)" type"text/css" href="style.css" /> 	
+	<link rel="stylesheet" media="screen and (max-width:870px)" type"text/css" href="oi.css" /> 
+	<link rel="stylesheet" media="screen and (max-width:500px)" type"text/css" href="ola.css" /> 
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+	<div id="quemsomos" class="bgParallax" data-speed="15">
+     		<article>
+     			<h1>Quem Somos:</h1>
+			<p>Mažieji įmonių formuoja studentų, lankančių bakalauro studijų aukštosiose mokyklose Sąjunga surengė civilinėje asociacijai, kad galėtų vykdyti projektus ir paslaugas, kurie prisideda prie šalies vystymosi ir rengti kvalifikuotus ir padarė specialistų šiam tikslui. Pirmasis tikslas jaunesniųjų įmonių yra asmeniškai ir profesionaliai plėtoti savo nariams per darbo patirtį, vykdant projektus ir paslaugas operacijos rajone baigimo, į kurią jaunesnysis bendrovė yra įpareigotas žinoma. </p>
+     		</article>
+	</div>
+
+	<div class="header">
+		<div class="circulo"><h1>Click</h1></div>
+   		<nav>
+    			<ul>     
+      				<li class="home">Home</li>
+      				<li class="servico">Serviços</li>
+      				<li class="contato">Contato</li>
+			<!--	<li class="slider"></li>	-->
+    			</ul>
+   		</nav>
+  	</div>
+
+	<div id="wrap">
+		<div id="esquerda">
+			<header>
+				<h2>Oláaa!!</h2>
+			</header>
+		</div>
+		<div id="content">
+			<div id="acima"> </div>
+			<div id="baixo">
+				<div id="e"> </div>
+				<div id="d">
+					<div id="AAA">  </div>
+					<div id="BBB">  </div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<script>
+
+		$('div.bgParallax').each(function(){
+			var $obj = $(this);
+ 			$(window).scroll(function() {
+				var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+ 				var bgpos = '50% '+ yPos + 'px';
+ 				$obj.css('background-position', bgpos );
+			}); 
+		});
+
+		$('.circulo' ).click(function() {
+			$(".circulo").animate({ backgroundColor: "rgba(85, 26, 139, 0.6 )" });
+			$("h1").animate({ color: "#FFF" });
+			$("h2").animate({ color: "#FFF" });
+			$( ".header" ).animate({ backgroundColor: "rgba(250, 255, 250, 0.7)" });
+			$( "#wrap" ).animate({ backgroundColor: "rgba(106,90,205, 0.9)" });
+			$( "#content" ).animate({backgroundColor: "rgba(0, 220, 250, 0.7)"});
+			$( "#baixo" ).animate({backgroundColor: "#FFF"});
+			$( "#esquerda" ).animate({backgroundColor: "#D8BFD8"});
+			$( "#acima" ).animate({backgroundColor: "rgba(255,105,180,0.8)"});
+			$( "#BBB" ).animate({backgroundColor: "rgba(250,0,250,0.8)"});
+			$( "li" ).animate({
+    				color: "rgb(85, 26, 139)",
+    				backgroundColor: "rgba(139, 123, 150, 0.8)"
+  			});
+		});
+
+
+		$( 'article' ).on( 'click', 'h1', function() {
+			$("p").remove();
+			var acima, foto;
+			acima = $('.article');
+			foto = $('<div id="#bff"><h1>fotinha</h1></div>');
+			acima.append(foto);
+		});
+
+		var primeiro, segundo;
+		primeiro = $('#esquerda');
+		segundo = primeiro.next();
+		primeiro.toggleClass('esquerda');
+		segundo.toggleClass('esquerda');
+
+	</script>
+</body>
+
+</html>
